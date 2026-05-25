@@ -1,0 +1,122 @@
+Create a responsive landing page website for Prova Island using HTML, CSS, and JavaScript.
+
+I have uploaded a PNG image that should be used as the main visual artwork/body of the homepage. Use the PNG as the central visual section of the page, but do not place invisible clickable links over the PNG. The real clickable links should be in the header and footer.
+
+The website should have this structure:
+
+1. Header
+2. Main visual image section using the uploaded PNG
+3. Footer
+
+HEADER REQUIREMENTS
+
+Create a professional, clean, responsive header at the top of the page.
+
+The header should include the Prova Island name or logo area on the left and the following navigation links on the right:
+
+Play Now
+Link: https://www.provaisland.tv/
+
+How It Works
+Link: https://sites.google.com/view/prova-island-how-it-works/how-prova-works
+
+Patreon
+Link: https://www.patreon.com/cw/ProvaIsland
+
+Support
+This should open an email draft to info@provaisland.com
+Use: mailto:info@provaisland.com
+
+Microblog
+Link: https://oneminuteteaching.blogspot.com/
+
+Log In
+Link: https://www.provaisland.tv/
+
+Sign Up
+Link: https://www.provaisland.tv/
+
+Make “Play Now” and “Sign Up” visually stand out as button style links.
+
+On mobile, the header should become a clean hamburger menu or stacked mobile menu.
+
+MAIN BODY REQUIREMENTS
+
+Use the uploaded PNG as the main visual artwork/body of the page.
+
+The image should:
+
+1. Be centered.
+2. Scale responsively to fit desktop, tablet, and mobile screens.
+3. Keep its original proportions.
+4. Not be cropped in a way that cuts off important text or characters.
+5. Have rounded corners only if it looks good with the design.
+6. Have alt text that says: “Prova Island gamified learning homepage artwork.”
+
+Do not use the PNG as a background image that stretches awkwardly. Place it as a responsive image inside the page.
+
+FOOTER REQUIREMENTS
+
+Create a real footer below the PNG.
+
+The footer should include:
+
+© 2026 Prova Island, All Rights Reserved.
+
+Privacy Policy
+Link: https://provaisland.com/privacypolicy
+
+Social media icons/logos that link to the following:
+
+Instagram
+Link: https://www.instagram.com/provaisland
+
+YouTube
+Link: https://www.youtube.com/channel/UCx12TZRiD7vVcFARwVuM6cA
+
+TikTok
+Link: https://www.tiktok.com/@provaisland
+
+X
+Link: https://x.com/provaisland
+
+Threads
+Link: https://www.threads.com/@provaisland
+
+Use one icon for each platform only. Do not duplicate any social media icons.
+
+Make sure each social media icon is clickable, has an accessible label, and opens in a new browser tab.
+
+STYLE REQUIREMENTS
+
+The style should match the fun tropical adventure theme of the PNG.
+
+Use a clean, polished, playful design with:
+
+1. A bright tropical colour palette.
+2. Rounded buttons.
+3. A professional header and footer.
+4. Good spacing.
+5. Mobile responsiveness.
+6. Clear hover effects on links and buttons.
+7. Accessible contrast for text and buttons.
+
+TECHNICAL REQUIREMENTS
+
+Use simple files:
+
+index.html
+style.css
+script.js if needed
+
+Make sure all links open correctly.
+
+External links should open in a new browser tab where appropriate.
+
+Use accessible labels for social media icons.
+
+If using social media icons, use either simple SVG icons, Font Awesome, or clean text based placeholders if icon libraries are not available.
+
+The final page should look like a real professional landing page, not just an image placed on a blank screen.
+
+Make sure the page works well on desktop, tablet, and mobile. The uploaded PNG should be displayed clearly and professionally as the main body artwork, with the real clickable navigation in the header and footer.
