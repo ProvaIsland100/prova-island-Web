@@ -152,15 +152,13 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
             <p className="text-muted-foreground font-semibold" data-testid="text-copyright">
               2026 Prova Island, All Rights Reserved.
             </p>
-            <a
-              href="https://provaisland.com/privacypolicy"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/privacypolicy"
               className="text-muted-foreground font-bold hover:text-primary transition-colors"
               data-testid="link-privacy-policy"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
 
         </div>
