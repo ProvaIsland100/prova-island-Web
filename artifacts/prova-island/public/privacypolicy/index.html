@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Prova Island</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0eb89d;
+      --primary-light: #e6f9f6;
+      --primary-dark: #0a9982;
+      --accent: #f5a623;
+      --accent-dark: #d4891a;
+      --secondary: #fbbf24;
+      --text: #1a2e2b;
+      --muted: #5a7572;
+      --border: rgba(14,184,157,0.15);
+      --bg: #f5faf9;
+      --white: #ffffff;
+      --radius: 1.5rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 3px solid var(--border);
+      box-shadow: 0 2px 12px rgba(14,184,157,0.08);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      background: var(--primary-light);
+      border-radius: 0.75rem;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .logo:hover .logo-icon { background: rgba(14,184,157,0.2); }
+
+    .logo-icon svg { width: 26px; height: 26px; color: var(--primary); }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover { color: var(--primary); transform: translateY(-1px); }
+
+    .nav-divider {
+      width: 2px;
+      height: 28px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.55rem 1.4rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+      border: none;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .btn:active { transform: translateY(1px); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 0 var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: var(--secondary);
+      color: var(--text);
+      box-shadow: 0 4px 0 var(--accent-dark);
+    }
+
+    /* ── MOBILE NAV ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .hamburger svg { width: 32px; height: 32px; color: var(--primary); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0.75rem;
+      background: var(--white);
+      padding: 1.5rem;
+      border-top: 2px solid var(--border);
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu .nav-link { font-size: 1.1rem; padding: 0.5rem 0; }
+
+    .mobile-menu .btn { width: 100%; margin-top: 0.25rem; padding: 0.85rem; font-size: 1rem; }
+
+    /* ── PAGE CONTENT ── */
+    main {
+      flex: 1;
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+      border-radius: 0.75rem;
+      transition: background 0.2s;
+      margin-bottom: 2.5rem;
+    }
+
+    .back-btn:hover { background: var(--primary-light); }
+
+    .back-btn svg { width: 20px; height: 20px; }
+
+    .page-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 2px solid var(--border);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 8px rgba(14,184,157,0.06);
+    }
+
+    .card-intro p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .card-intro a { color: var(--primary); font-weight: 700; text-decoration: none; }
+    .card-intro a:hover { text-decoration: underline; }
+
+    .card h2 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--text);
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card p a { color: var(--primary); font-weight: 700; text-decoration: none; }
+    .card p a:hover { text-decoration: underline; }
+
+    .subheading {
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.75rem;
+      margin-bottom: 0.4rem;
+    }
+
+    ul.policy-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    ul.policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    ul.policy-list li::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(14,184,157,0.5);
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(14,184,157,0.08), rgba(245,166,35,0.08));
+      border: 2px solid rgba(14,184,157,0.2);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-card h2 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    .back-bottom {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .back-bottom a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--white);
+      border-top: 3px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      opacity: 0.25;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-logo-icon {
+      background: var(--primary-light);
+      border-radius: 1rem;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo-icon svg { width: 28px; height: 28px; color: var(--primary); }
+
+    .footer-logo-text {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0.75rem 0;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 1rem;
+      border: 2px solid transparent;
+      background: var(--bg);
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .social-link:hover {
+      border-color: rgba(14,184,157,0.25);
+      transform: translateY(-3px);
+    }
+
+    .social-link svg { width: 26px; height: 26px; }
+    .social-link.instagram:hover { color: #E1306C; }
+    .social-link.youtube:hover { color: #FF0000; }
+    .social-link.tiktok:hover { color: #000; }
+    .social-link.x:hover { color: #000; }
+    .social-link.threads:hover { color: #000; }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      border-top: 2px solid var(--border);
+      padding-top: 1.5rem;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-bottom p, .footer-bottom a {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover { color: var(--primary); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .hamburger { display: flex; }
+      main { padding: 2rem 1rem 3rem; }
+      .card { padding: 1.25rem 1.25rem; }
+      .footer-bottom { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Prova Island home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8c0-4-3-6-5-6S7 4 7 8c0 3 2 5 5 6 3-1 5-3 5-6z"/>
+            <path d="M12 14v8"/>
+            <path d="M9 18h6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Prova Island</span>
+      </a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link" href="https://sites.google.com/view/prova-island-how-it-works/how-prova-works" target="_blank" rel="noopener noreferrer">How It Works</a>
+        <a class="nav-link" href="https://www.patreon.com/cw/ProvaIsland" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a class="nav-link" href="https://oneminuteteaching.blogspot.com/" target="_blank" rel="noopener noreferrer">Microblog</a>
+        <a class="nav-link" href="mailto:info@provaisland.com">Support</a>
+        <a class="nav-link" href="https://www.provaisland.tv/" target="_blank" rel="noopener noreferrer">Log In</a>
+        <div class="nav-divider" aria-hidden="true"></div>
+        <a class="btn btn-secondary" href="https://www.provaisland.tv/" target="_blank" rel="noopener noreferrer">Sign Up</a>
+        <a class="btn btn-primary" href="https://www.provaisland.tv/" target="_blank" rel="noopener noreferrer">Play Now</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a class="nav-link" href="https://sites.google.com/view/prova-island-how-it-works/how-prova-works" target="_blank" rel="noopener noreferrer">How It Works</a>
+      <a class="nav-link" href="https://www.patreon.com/cw/ProvaIsland" target="_blank" rel="noopener noreferrer">Patreon</a>
+      <a class="nav-link" href="https://oneminuteteaching.blogspot.com/" target="_blank" rel="noopener noreferrer">Microblog</a>
+      <a class="nav-link" href="mailto:info@provaisland.com">Support</a>
+      <a class="nav-link" href="https://www.provaisland.tv/" target="_blank" rel="noopener noreferrer">Log In</a>
+      <a class="btn btn-secondary" href="https://www.provaisland.tv/" target="_blank" rel="noopener noreferrer">Sign Up</a>
+      <a class="btn btn-primary" href="https://www.provaisland.tv/" target="_blank" rel="noopener noreferrer">Play Now</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <a href="/" class="back-btn" aria-label="Back to home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
+
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-subtitle">Last updated: 25 September 2025</p>
+
+    <!-- Intro -->
+    <div class="card card-intro">
+      <p>Constructivist Creations Ltd. ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and safeguard your information when you play the Prova Island mobile game, access the WebGL version, or visit our official website at <a href="https://provaisland.com/" target="_blank" rel="noopener noreferrer">https://provaisland.com/</a>. By using Prova Island, you agree to this Privacy Policy. If you do not agree, please discontinue use.</p>
+    </div>
+
+    <!-- Scope -->
+    <div class="card">
+      <h2>Scope</h2>
+      <p>This Privacy Policy applies to:</p>
+      <ul class="policy-list">
+        <li>The Prova Island mobile game on Google Play.</li>
+        <li>The official Prova Island website (https://provaisland.com/).</li>
+        <li>The WebGL build of Prova Island, accessible through standard web browsers.</li>
+      </ul>
+      <p>It covers data collected directly by us and through integrated third-party services.</p>
+    </div>
+
+    <!-- Information We Collect -->
+    <div class="card">
+      <h2>Information We Collect</h2>
+      <p class="subheading">a. Information You Provide Directly</p>
+      <ul class="policy-list">
+        <li>Username, display name, or profile details (if account creation is enabled).</li>
+        <li>Email address or other contact details when you reach out for support.</li>
+        <li>Feedback, survey responses, or voluntary submissions.</li>
+      </ul>
+      <p class="subheading">b. Information Collected Automatically</p>
+      <ul class="policy-list">
+        <li>Gameplay data (progress, achievements, in-game actions, leaderboard results).</li>
+        <li>Device information (model, OS version, unique identifiers).</li>
+        <li>Log and usage data (IP address, crash reports, diagnostics, performance analytics).</li>
+      </ul>
+      <p class="subheading">c. Information from Third Parties</p>
+      <p>Integrated services that may collect data under their own policies include:</p>
+      <ul class="policy-list">
+        <li>Google Play Services – Google Privacy Policy</li>
+        <li>Google AdMob (Ads) – AdMob Policy</li>
+        <li>Firebase Analytics &amp; Crashlytics – Firebase Privacy &amp; Security</li>
+        <li>Unity Analytics / Ads (if enabled) – Unity Privacy Policy</li>
+        <li>PlayFab (Microsoft Azure) – account services, leaderboards, multiplayer, cloud saves – Microsoft Privacy Statement</li>
+        <li>Photon (Exit Games) – used for real-time multiplayer networking and connectivity – Photon Privacy Policy</li>
+      </ul>
+    </div>
+
+    <!-- How We Use Information -->
+    <div class="card">
+      <h2>How We Use Information</h2>
+      <p>We process your data to:</p>
+      <ul class="policy-list">
+        <li>Provide and operate the game (cloud saves, multiplayer, leaderboards).</li>
+        <li>Improve stability and fix bugs.</li>
+        <li>Deliver and measure in-app advertisements.</li>
+        <li>Support in-app purchases via Google Play Billing.</li>
+        <li>Send important service updates or push notifications.</li>
+        <li>Respond to inquiries and support tickets.</li>
+        <li>Detect fraud, enforce terms of service, and ensure fair play.</li>
+        <li>Comply with applicable laws.</li>
+      </ul>
+    </div>
+
+    <!-- In-App Purchases -->
+    <div class="card">
+      <h2>In-App Purchases &amp; Payments</h2>
+      <p>All transactions are handled by Google Play Billing. We do not store or process your credit card or banking details. See Google's Terms of Service and Privacy Policy.</p>
+    </div>
+
+    <!-- WebGL -->
+    <div class="card">
+      <h2>WebGL Version &amp; Browser Data</h2>
+      <p>When you play the WebGL build:</p>
+      <ul class="policy-list">
+        <li>Progress may be saved using browser cookies or storage.</li>
+        <li>Browsers and hosting platforms may collect diagnostics.</li>
+        <li>Please review your browser's privacy policies.</li>
+      </ul>
+    </div>
+
+    <!-- Push Notifications -->
+    <div class="card">
+      <h2>Push Notifications &amp; Device Permissions</h2>
+      <p class="subheading">Push Notifications</p>
+      <p>Used for updates, events, or reminders. You can disable them in device settings.</p>
+      <p class="subheading">Permissions</p>
+      <p>Internet access, storage (for saves), and similar. These are used strictly for gameplay, not unrelated purposes.</p>
+    </div>
+
+    <!-- Advertising -->
+    <div class="card">
+      <h2>Advertising &amp; Tracking Choices</h2>
+      <p>Ads may be delivered through Google AdMob or similar networks. These may use advertising identifiers. You can opt-out:</p>
+      <ul class="policy-list">
+        <li>Android: Settings → Google → Ads → Opt out of Ads Personalization.</li>
+        <li>iOS: Settings → Privacy → Apple Advertising → Limit Ad Tracking.</li>
+      </ul>
+    </div>
+
+    <!-- Sharing -->
+    <div class="card">
+      <h2>Sharing of Information</h2>
+      <p>We do not sell personal data. We may share:</p>
+      <ul class="policy-list">
+        <li>With service providers (analytics, crash reports, hosting, PlayFab).</li>
+        <li>With platform operators (Google Play, WebGL hosting).</li>
+        <li>With legal authorities when required.</li>
+        <li>As part of business transfers (merger, acquisition, or sale).</li>
+      </ul>
+    </div>
+
+    <!-- Links to Other Sites -->
+    <div class="card">
+      <h2>Links to Other Sites</h2>
+      <p>Our game and site may link to external sites (e.g., social media). Their privacy practices are not governed by us.</p>
+    </div>
+
+    <!-- GDPR -->
+    <div class="card">
+      <h2>Legal Bases for Processing (GDPR)</h2>
+      <p>If you are in the EEA/UK, we rely on:</p>
+      <ul class="policy-list">
+        <li>Consent (e.g., ads, analytics).</li>
+        <li>Contractual necessity (game services, saves).</li>
+        <li>Legitimate interests (service improvement, fraud prevention).</li>
+        <li>Legal obligations (regulatory compliance).</li>
+      </ul>
+    </div>
+
+    <!-- Children's Privacy -->
+    <div class="card">
+      <h2>Children's Privacy</h2>
+      <p>Prova Island is designed to be enjoyed by players of all ages, including children.</p>
+      <p>We do not knowingly collect personal information from children under 13 (or the minimum age required in your region under applicable laws such as COPPA in the U.S. or GDPR-K in the EU/EEA) without verified parental consent.</p>
+      <p>Parents and guardians are encouraged to supervise their child's use of the game.</p>
+      <p>Parents may contact us at <a href="mailto:info@provaisland.com">info@provaisland.com</a> to review, update, or request deletion of their child's information.</p>
+    </div>
+
+    <!-- User Rights -->
+    <div class="card">
+      <h2>User Rights</h2>
+      <p>Depending on your region, you may:</p>
+      <ul class="policy-list">
+        <li>Access, correct, or delete your personal data.</li>
+        <li>Restrict or object to processing.</li>
+        <li>Request data portability.</li>
+        <li>Withdraw consent where processing is based on consent.</li>
+        <li>Opt out of targeted advertising.</li>
+      </ul>
+      <p>Contact <a href="mailto:info@provaisland.com">info@provaisland.com</a> to exercise these rights.</p>
+    </div>
+
+    <!-- Data Retention -->
+    <div class="card">
+      <h2>Data Retention</h2>
+      <p>We retain data only as long as necessary for:</p>
+      <ul class="policy-list">
+        <li>Gameplay and account continuity.</li>
+        <li>Legal compliance.</li>
+        <li>Security and fraud prevention.</li>
+      </ul>
+      <p>You may request deletion anytime. PlayFab and our systems will erase or anonymize data within 30 days unless law requires longer retention.</p>
+    </div>
+
+    <!-- International Transfers -->
+    <div class="card">
+      <h2>International Transfers</h2>
+      <p>Your data may be processed in Canada, India, the United States, and other regions. Where legally required, we use Standard Contractual Clauses (SCCs) or equivalent safeguards.</p>
+    </div>
+
+    <!-- Security -->
+    <div class="card">
+      <h2>Security</h2>
+      <p>We use encryption, access controls, and secure servers to protect data. While no system is fully secure, we work to minimize risks.</p>
+    </div>
+
+    <!-- Cookies -->
+    <div class="card">
+      <h2>Cookies &amp; Tracking (Website &amp; WebGL)</h2>
+      <p>We may use cookies and browser storage to:</p>
+      <ul class="policy-list">
+        <li>Save game progress.</li>
+        <li>Analyze performance.</li>
+        <li>Improve user experience.</li>
+      </ul>
+      <p>Disabling cookies may affect functionality.</p>
+    </div>
+
+    <!-- CCPA -->
+    <div class="card">
+      <h2>California Privacy Rights (CCPA)</h2>
+      <p>California residents may:</p>
+      <ul class="policy-list">
+        <li>Know categories of data collected.</li>
+        <li>Request deletion.</li>
+        <li>Opt out of "sale" of personal data (we do not sell).</li>
+        <li>Exercise rights without discrimination.</li>
+      </ul>
+      <p>Requests: <a href="mailto:info@provaisland.com">info@provaisland.com</a>.</p>
+    </div>
+
+    <!-- Complaints -->
+    <div class="card">
+      <h2>Complaints &amp; Dispute Resolution</h2>
+      <p>Unresolved concerns may be raised with your local Data Protection Authority (EEA/UK) or consumer protection authority.</p>
+    </div>
+
+    <!-- Future Features -->
+    <div class="card">
+      <h2>Future Features</h2>
+      <p>If new features (multiplayer, accounts, accessories store) are added, we may update practices. Changes will be reflected in this Policy.</p>
+    </div>
+
+    <!-- Google Play -->
+    <div class="card">
+      <h2>Google Play Data Safety Alignments</h2>
+      <p>The information in this Privacy Policy is consistent with the disclosures you will see in the Google Play Data Safety section for Prova Island.</p>
+    </div>
+
+    <!-- Privacy Highlights -->
+    <div class="card">
+      <h2>Privacy Highlights</h2>
+      <p>We want this policy to be understandable to everyone:</p>
+      <ul class="policy-list">
+        <li>We collect only the data needed to run the game, save progress, and improve features.</li>
+        <li>We don't sell your personal data.</li>
+        <li>Ads shown in the game (if any) are age-appropriate and follow Google Play's Families Ads Policy.</li>
+        <li>Parents can contact us to manage or delete their child's data.</li>
+        <li>You can opt out of personalized ads and request data deletion at any time.</li>
+      </ul>
+    </div>
+
+    <!-- Changes -->
+    <div class="card">
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may revise this Policy periodically. Updates will be posted in-app and on our website with the "last updated" date.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>Contact Us</h2>
+      <p>Constructivist Creations Ltd.</p>
+      <a href="mailto:info@provaisland.com">info@provaisland.com</a>
+    </div>
+
+    <!-- Back to Home (bottom) -->
+    <div class="back-bottom">
+      <a href="/" class="btn btn-primary" aria-label="Back to home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.4rem">
+          <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bar"></div>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8c0-4-3-6-5-6S7 4 7 8c0 3 2 5 5 6 3-1 5-3 5-6z"/>
+            <path d="M12 14v8"/>
+            <path d="M9 18h6"/>
+          </svg>
+        </div>
+        <span class="footer-logo-text">Prova Island</span>
+      </div>
+
+      <div class="social-links" role="list">
+        <a class="social-link instagram" href="https://www.instagram.com/provaisland" target="_blank" rel="noopener noreferrer" aria-label="Instagram" role="listitem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a class="social-link youtube" href="https://www.youtube.com/channel/UCx12TZRiD7vVcFARwVuM6cA" target="_blank" rel="noopener noreferrer" aria-label="YouTube" role="listitem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+        <a class="social-link tiktok" href="https://www.tiktok.com/@provaisland" target="_blank" rel="noopener noreferrer" aria-label="TikTok" role="listitem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        </a>
+        <a class="social-link x" href="https://x.com/provaisland" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" role="listitem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="social-link threads" href="https://www.threads.com/@provaisland" target="_blank" rel="noopener noreferrer" aria-label="Threads" role="listitem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.583-1.312-.883-2.378-.892h-.014c-.853 0-1.959.231-2.687 1.43l-1.735-1.125c.917-1.411 2.438-2.187 4.422-2.187h.018c3.registers 0 4.9 2.026 5.25 4.087.17.978.233 1.982.186 2.997.109.075.214.152.314.232 1.346 1.037 2.093 2.418 2.13 3.893.061 2.517-.836 4.52-2.597 5.808C17.4 23.342 15.063 24 12.186 24z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>2026 Prova Island, All Rights Reserved.</p>
+        <a href="/privacypolicy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+</body>
+</html>
